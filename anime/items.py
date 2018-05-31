@@ -27,4 +27,6 @@ class AnimeItem(scrapy.Item):
     tag = scrapy.Field()
     # 目录类别
     catalog = scrapy.Field()
+    # 图片本地存储路径(相对路径)
+    image_path = scrapy.Field()
     pass

@@ -2,3 +2,5 @@ crawls
 items.jl
 __pycache__
 *.jl
+download
+.DS_Store
