@@ -8,11 +8,13 @@ import json
 import scrapy
 from scrapy.pipelines.images import ImagesPipeline
 from scrapy.exceptions import DropItem
+import time
 
 
 class AnimePipeline(object):
     def open_spider(self, spider):
-        self.file = open('sogou.jl', 'w')
+        filename = 'sogou' + time.strftime("%Y%m%d", time.localtime()) + '.jl'
+        self.file = open(filename, 'w')
 
     def close_spider(self, spider):
         self.file.close()

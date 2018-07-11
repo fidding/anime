@@ -10,7 +10,13 @@ class SogouSpider(scrapy.Spider):
     page = 1
     # https://pic.sogou.com/pics?query=高清动漫&start=1&reqType=ajax
     # 目录类别
-    imgCatalog = ['高清动漫', '火影忍者', '海贼王']
+    imgCatalog = ['高清动漫', '火影忍者', '海贼王', '死神', '棋魂',
+                  '钢之炼金术士', '犬夜叉', '网球王子', '全职猎人',
+                  '名侦探柯南', '新世纪福音战士', '斩赤红之瞳', '灌篮高手',
+                  '金色琴弦', '机动战士高达', '哆啦A梦', '浪客剑心',
+                  '超时空要塞', '死神', '乱马二分之一', '美少女战士',
+                  '反叛的鲁鲁修', '死亡笔记', '城市猎人', '银魂',
+                  '家庭教师', '魔卡少女樱']
     catalogIndex = 0
     start_urls = [getUrlOfSogou(imgCatalog[catalogIndex], page)]
 
